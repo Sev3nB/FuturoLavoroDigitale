@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercato Globale</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <button id="theme-toggle">🌙 Tema Scuro</button>
+    <h2>Accesso al Mercato Globale</h2>
+  </header>
+
+  <main>
+    <p>
+      Lavorare online significa poter collaborare con clienti e aziende di qualsiasi parte del mondo. Grazie a piattaforme internazionali, è possibile offrire servizi senza limiti geografici.
+    </p>
+
+    <div class="schema">
+      <h3>🌐 Piattaforme globali popolari</h3>
+      <ul>
+        <li>💼<strong><a href="https://www.fiverr.com" target="_blank">Fiverr</a></strong> – micro-servizi digitali</li>
+        <li>🎨<strong><a href="https://www.upwork.com" target="_blank">Upwork</a></strong> – freelance professionisti</li>
+        <li>👨‍💻<strong><a href="https://www.toptal.com" target="_blank">Toptal</a></strong> – developer e designer selezionati</li>
+      </ul>
+    </div>
+
+    <h3>🌍 Esempio: freelance italiano</h3>
+    <p>
+      Marco è un grafico freelance che lavora per aziende in Canada, India e Germania. Comunica in inglese via Zoom, riceve pagamenti in euro o dollari su PayPal, e non ha mai lasciato Torino.
+    </p>
+
+    <p>
+      L’accesso al mercato globale democratizza il lavoro e permette a chiunque abbia competenze digitali di costruirsi una carriera internazionale.
+    </p>
+
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="index.html" style="
+        display: inline-block;
+        background-color: #1e88e5;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: background 0.3s;
+      " onmouseover="this.style.backgroundColor='#1565c0'" onmouseout="this.style.backgroundColor='#1e88e5'">
+        ⬅ Torna alla Home
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Il Futuro del Lavoro Digitale</p>
+    <p>Brian Romano, 4DI, brianromano51@gmail.com</p>
+
+  </footer>
+
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      themeToggleButton.innerText = '🌕 Tema Chiaro';
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        themeToggleButton.innerText = '🌕 Tema Chiaro';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeToggleButton.innerText = '🌙 Tema Scuro';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

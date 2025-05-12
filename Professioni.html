@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavoro da Remoto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <button id="theme-toggle">🌙 Tema Scuro</button>
+    <h2>Lavoro da Remoto e Flessibilità</h2>
+  </header>
+
+  <main>
+    <p>
+      Il lavoro da remoto è diventato uno degli aspetti centrali del mondo digitale. Grazie a strumenti di collaborazione online e connessioni stabili, oggi è possibile lavorare da casa, in coworking o persino da una spiaggia all'estero.
+    </p>
+
+    <div class="schema">
+      <h3>📊 Vantaggi principali</h3>
+      <ul>
+        <li><strong>+25%</strong> di produttività media (studio Stanford, 2022)</li>
+        <li><strong>83%</strong> dei lavoratori vuole flessibilità (Buffer 2023)</li>
+        <li><strong>40 minuti</strong> risparmiati al giorno in spostamenti</li>
+      </ul>
+    </div>
+
+    <h3>🌍 Esempi pratici</h3>
+    <p>
+      Aziende come <strong>GitLab</strong>, <strong>Zapier</strong> e <strong>Automattic</strong> operano completamente da remoto, con team distribuiti in tutto il mondo. I loro dipendenti usano strumenti come:
+    </p>
+    <ul>
+      <li><strong><a href="https://slack.com" target="_blank">Slack</a></strong> – piattaforma di messaggistica per team</li>
+      <li><strong><a href="https://zoom.us" target="_blank">Zoom</a></strong> – videoconferenze e meeting online</li>
+      <li><strong><a href="https://trello.com" target="_blank">Trello</a></strong> – gestione di progetti e attività</li>
+    </ul>
+
+    <p>
+      Il lavoro da remoto non è solo un’opzione temporanea: per molti è diventato uno stile di vita sostenibile e produttivo. Serve solo una buona connessione, organizzazione e cultura digitale.
+    </p>
+
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="index.html" style="
+        display: inline-block;
+        background-color: #1e88e5;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: background 0.3s;
+      " onmouseover="this.style.backgroundColor='#1565c0'" onmouseout="this.style.backgroundColor='#1e88e5'">
+        ⬅ Torna alla Home
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Il Futuro del Lavoro Digitale</p>
+    <p>Brian Romano, 4DI, brianromano51@gmail.com</p>
+  </footer>
+
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      themeToggleButton.innerText = '🌕 Tema Chiaro';
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        themeToggleButton.innerText = '🌕 Tema Chiaro';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeToggleButton.innerText = '🌙 Tema Scuro';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

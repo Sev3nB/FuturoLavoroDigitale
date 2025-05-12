@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Futuro del Lavoro Digitale</title>
+  <link rel="stylesheet" href="styleindex.css" />
+</head>
+<body>
+  <header>
+    <!-- Pulsante per cambiare tema -->
+    <button id="theme-toggle">🌙 Tema Scuro</button>
+    <h1>Il Futuro del Lavoro Digitale</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <img src="https://img.icons8.com/ios/452/online-shop.png" alt="Icona remoto" />
+      <h3>Lavoro da Remoto</h3>
+      <p>Scopri come il lavoro da remoto sta cambiando il mondo professionale e come adattarti a questa nuova realtà.</p>
+      <a href="remoto.html" class="cta-button">Scopri di più</a>
+    </div>
+
+    <div class="card">
+      <img src="https://img.icons8.com/ios/452/web-design.png" alt="Icona professioni" />
+      <h3>Professioni Emergenti</h3>
+      <p>Esplora le professioni digitali più richieste e come acquisire le competenze per entrare in questo mondo.</p>
+      <a href="professioni.html" class="cta-button">Scopri di più</a>
+    </div>
+
+    <div class="card">
+      <img src="https://img.icons8.com/ios/452/worldwide-location.png" alt="Icona globale" />
+      <h3>Mercato Globale</h3>
+      <p>Accedi al mercato globale delle opportunità lavorative digitali e scopri come lavorare con clienti di tutto il mondo.</p>
+      <a href="globale.html" class="cta-button">Scopri di più</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Il Futuro del Lavoro Digitale</p>
+    <p>Brian Romano, 4DI, brianromano51@gmail.com</p>
+  </footer>
+
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica se c'è già un tema salvato
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      themeToggleButton.innerText = '🌕 Tema Chiaro';
+    }
+
+    themeToggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        themeToggleButton.innerText = '🌕 Tema Chiaro';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeToggleButton.innerText = '🌙 Tema Scuro';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
